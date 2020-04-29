@@ -1,0 +1,33 @@
+{
+  "name": "fs-pp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "thjxs <tanhongjianx@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jshintConfig": {
+    "esversion": 9
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote",
+      "jshint"
+    ]
+  },
+  "dependencies": {
+    "formidable": "^1.2.2"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "jshint": "^2.11.0",
+    "lint-staged": "^10.2.0",
+    "prettier": "^2.0.5"
+  }
+}
